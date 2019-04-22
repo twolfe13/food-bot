@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Details</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Caveat|Kaushan+Script" rel="stylesheet">
+</head>
+<body>
+  
+  
+
+
+    <div class="main-menu2">
+<ul class="menu">
+            <li><a href="{{ url_for('index') }}"><strong> Order Again! </strong> </a></li>
+          </ul>
+    </div>
+    
+    
+          <div class="order-details"> 
+          
+	<h3> Excellent choice! Here's your meal and drink:  </h3>
+	
+	
+	<h1> Your Meal:  </h1> <h4>  {{ meal_order }}  </h4> 
+ 	<h1> Your Drink:  </h1> <h4>{{ drink_order }}   </h4> 
+
+  </div>  
+  
+    <div class="order-details-footer"> 
+<footer class = "footer">
+
+      
+      <p> ~ A bot created to not waste brain power on choosing meals </p>
+     
+    
+   
+
+</footer>  
+  </div>
+  
+</body>
+
+</html>
