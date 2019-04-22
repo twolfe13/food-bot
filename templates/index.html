@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food bot</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Caveat|Kaushan+Script" rel="stylesheet">
+<!--Jquery-->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <script> 
+    $( ".intro" ).button({
+  icon: "ui-icon-gear"
+});
+    </script>
+    
+    <div class="intro">  
+    <center>
+
+    <h2>Welcome to the food bot!</h2>
+
+    <p>We are excited to serve you!  Click below to get started.</p>
+
+<!--   <button> <a id="moneybutton">Order Now</a></button> --> 
+
+<div class="button_cont" align="center"><a id="moneybutton" class="example_b" rel="nofollow noopener">Choose Your Meal!</a></div>
+
+
+    </center>
+    
+        </div>
+        
+    <div class="orders" >
+		
+		<center>
+		  
+		
+	<h1> What would you like to eat today? </h1>
+ 
+ 	
+ 
+		<form method="POST" action="/order/register">
+	 	  <label>
+		  Which meal are you ordering? <input type="text" autocapitalize="sentences" name="meal_order" id="meal" placeholder="breakfast, lunch, or dinner" required="" /> 
+		  </label>  
+<!--		  <label>  
+	      Which type of drink? (hot or cold): <input type="text" name="drink_order" id="drink" placeholder="hot or cold" required="" /> 
+		  </label>  -->
+			
+<input type="submit" name="submit" value="Complete Order">
+		</form>
+ 	
+ 	
+		</center>
+ 	
+			 </div>    
+    
+    <footer class = "footer">
+
+      <p> ~ A bot created to not waste brain power on choosing meals </p>
+     
+    
+   
+
+</footer>
+
+<script>
+$( "#moneybutton" ).click(function() {
+  $( ".orders" ).show( "fold", 1000 );
+});
+</script>
+
+
+</body>
+
+
+</html>
